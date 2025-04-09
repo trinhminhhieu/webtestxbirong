@@ -498,8 +498,16 @@ body {
 .news-item {
   display: flex;
   align-items: flex-start;
-  background-color: white;
-  padding: 10px;
+  /* background-color: white; */
+  padding: 5px;
+}
+
+.news-bgs {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 5px;
 }
 
 .news-image {
