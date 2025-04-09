@@ -562,7 +562,7 @@ body {
   position: relative;
   z-index: 1;
   padding: 20px;
-  top: 44px;
+  top: -1px;
 }
 
 /* //////slider */
