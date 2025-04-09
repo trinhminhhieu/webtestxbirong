@@ -1,13 +1,4 @@
 /* Reset CSS */
-:root {
-  --width-desktop-safe: 1720px;
-  --maxwidth-desktop-safe: calc(100% - 40px);
-  --width-mobile-safe: calc(100% - 40px);
-  --width-desktop: 2000px;
-  --width-mobile: 768px;
-  --height-desktop: 1000px;
-  --height-mobile: 1000px;
-}
 
 * {
   margin: 0;
@@ -25,6 +16,7 @@ body {
   font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
+  height: 100vh;
 }
 
 /* //////////header-wrapper//////////// */
@@ -135,9 +127,10 @@ body {
 }
 #scale-wrapper {
   transform-origin: top left;
-  width: 100%; /* chiếm toàn bộ chiều rộng để dễ scale */
+  width: 100vw;
+  overflow: hidden;
   display: flex;
-  justify-content: center; /* căn giữa .container sau khi scale */
+  justify-content: center;
 }
 
 .container {
