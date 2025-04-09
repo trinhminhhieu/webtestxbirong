@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dragon Ball Game</title>
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/@glidejs/glide@3.7.1/dist/css/glide.core.css"
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@glidejs/glide@3.7.1/dist/css/glide.core.css"
-    />
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -274,8 +274,24 @@
           <div class="title-center-ds">
             <img src="./DAC-SAC-GAME-BUTTON.png" alt="" class="tilte-img" />
           </div>
-
+          <!-- Swiper Container -->
           <div class="carousel-container">
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slide prev">
+                  <img src="./BANNER-DAC-SAC-GAME.png" alt="Ảnh 1" />
+                </div>
+                <div class="slide active">
+                  <img src="./BANNER-DAC-SAC-GAME1.png" alt="Ảnh 2" />
+                </div>
+                <div class="slide next">
+                  <img src="./BANNER-DAC-SAC-GAME2.png" alt="Ảnh 3" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="carousel-container">
             <div class="slider-container">
               <div class="glide">
                 <div class="glide__track" data-glide-el="track">
@@ -302,7 +318,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Footer -->
@@ -310,29 +326,109 @@
       </div>
     </div>
     <!-- Scripts -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.min.js"></script> -->
-    <script src="https://unpkg.com/@glidejs/glide@3.7.1/dist/glide.js"></script>
+
     <script>
+      // JavaScript cho slider
       document.addEventListener("DOMContentLoaded", function () {
-        const glide = new Glide(".glide", {
-          type: "carousel",
-          startAt: 0,
-          perView: 3,
-          focusAt: "center",
-          gap: -30,
-          autoplay: 2000, // Tự chạy sau 2s
-          hoverpause: true, // Dừng khi rê chuột
-          breakpoints: {
-            768: {
-              perView: 3,
-            },
-            992: {
-              perView: 3,
-            },
-          },
+        const slides = document.querySelectorAll(".slide");
+        const slider = document.querySelector(".slider");
+
+        let currentIndex = 1;
+        let startX, moveX;
+        let isDragging = false;
+
+        function updateSlides() {
+          slides.forEach((slide, index) => {
+            slide.className = "slide";
+
+            if (index === currentIndex) {
+              slide.classList.add("active");
+            } else if (
+              index === currentIndex - 1 ||
+              (currentIndex === 0 && index === slides.length - 1)
+            ) {
+              slide.classList.add("prev");
+            } else if (
+              index === currentIndex + 1 ||
+              (currentIndex === slides.length - 1 && index === 0)
+            ) {
+              slide.classList.add("next");
+            }
+          });
+        }
+
+        slider.addEventListener("mousedown", startDrag);
+        slider.addEventListener("touchstart", startDrag);
+        slider.addEventListener("mousemove", drag);
+        slider.addEventListener("touchmove", drag);
+        slider.addEventListener("mouseup", endDrag);
+        slider.addEventListener("touchend", endDrag);
+        slider.addEventListener("mouseleave", endDrag);
+
+        slides.forEach((slide) => {
+          slide.addEventListener("click", (e) => {
+            if (isDragging) return;
+            if (slide.classList.contains("prev")) {
+              currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+              updateSlides();
+            } else if (slide.classList.contains("next")) {
+              currentIndex = (currentIndex + 1) % slides.length;
+              updateSlides();
+            }
+          });
         });
 
-        glide.mount();
+        function startDrag(e) {
+          isDragging = true;
+          startX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+          document.body.style.cursor = "grabbing";
+        }
+
+        function drag(e) {
+          if (!isDragging) return;
+          e.preventDefault();
+          moveX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+        }
+
+        function endDrag(e) {
+          if (!isDragging) return;
+          isDragging = false;
+          document.body.style.cursor = "default";
+
+          if (!moveX) return;
+
+          const diffX = moveX - startX;
+          const threshold = 50;
+
+          if (diffX > threshold) {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          } else if (diffX < -threshold) {
+            currentIndex = (currentIndex + 1) % slides.length;
+          }
+
+          updateSlides();
+          moveX = null;
+        }
+
+        let autoSlide = setInterval(() => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateSlides();
+        }, 5000);
+
+        document
+          .querySelector(".slider-container")
+          .addEventListener("mouseenter", () => {
+            clearInterval(autoSlide);
+          });
+
+        document
+          .querySelector(".slider-container")
+          .addEventListener("mouseleave", () => {
+            autoSlide = setInterval(() => {
+              currentIndex = (currentIndex + 1) % slides.length;
+              updateSlides();
+            }, 5000);
+          });
       });
     </script>
 
@@ -409,7 +505,7 @@
       };
 
       let currentRace = "xayda";
-      let currentIndex = 0;
+      let currentPlayIndex = 0;
 
       function getActiveButtonImage(race) {
         switch (race) {
@@ -439,7 +535,7 @@
 
       function loadRace(race) {
         currentRace = race;
-        currentIndex = 0;
+        currentPlayIndex = 0;
         const icons = characterData[race];
 
         const buttons = document.querySelectorAll(".character-nav-button");
@@ -497,7 +593,7 @@
           icons[index].src =
             raceIcons[index].activeCircle || raceIcons[index].circle;
 
-          currentIndex = index;
+          currentPlayIndex = index;
           document.getElementById("mainCharacterImage").src =
             raceIcons[index].character;
         }
