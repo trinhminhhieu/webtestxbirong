@@ -21,258 +21,284 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="container">
-      <!-- Header Background Wrapper -->
-      <div class="header-wrapper">
-        <img src="./HEADER-BG.png" alt="Header Background" class="header-bg" />
+  <body id="page-body">
+    <div id="scale-wrapper">
+      <div class="container app-wrapper">
+        <!-- Header Background Wrapper -->
+        <div class="header-wrapper">
+          <img
+            src="./HEADER-BG.png"
+            alt="Header Background"
+            class="header-bg"
+          />
 
-        <!-- Header content on top -->
-        <div class="header">
-          <div class="nav-buttons">
-            <div class="col1">
-              <a href="#" class="nav-button">
-                <img
-                  src="./DANG-NHAP-BUTTON.png"
-                  class="nav-img"
-                  alt="Đăng nhập"
-                />
-              </a>
-              <a href="#" class="nav-button">
-                <img src="./NAP-THE-BUTTON.png" class="nav-img" alt="Nạp thẻ" />
-              </a>
-            </div>
-
-            <div class="col2">
-              <div class="center-button">
-                <img src="./AVATAR-APP-GAME.png" class="logo" alt="Logo" />
-                <a href="#" class="nav-button centerbuttons">
+          <!-- Header content on top -->
+          <div class="header">
+            <div class="nav-buttons">
+              <div class="col1">
+                <a href="#" class="nav-button">
                   <img
-                    src="./TAI-GAME-BUTTON.png"
+                    src="./DANG-NHAP-BUTTON.png"
                     class="nav-img"
-                    alt="Tải game"
+                    alt="Đăng nhập"
+                  />
+                </a>
+                <a href="#" class="nav-button">
+                  <img
+                    src="./NAP-THE-BUTTON.png"
+                    class="nav-img"
+                    alt="Nạp thẻ"
                   />
                 </a>
               </div>
-            </div>
 
-            <div class="col3">
-              <a href="#" class="nav-button">
-                <img
-                  src="./XEP-HANG-BUTTON.png"
-                  class="nav-img"
-                  alt="Xếp hạng"
-                />
-              </a>
-              <a href="#" class="nav-button">
-                <img
-                  src="./CONG-DONG-BUTTON.png"
-                  class="nav-img"
-                  alt="Cộng đồng"
-                />
-              </a>
+              <div class="col2">
+                <div class="center-button">
+                  <img src="./AVATAR-APP-GAME.png" class="logo" alt="Logo" />
+                  <a href="#" class="nav-button centerbuttons">
+                    <img
+                      src="./TAI-GAME-BUTTON.png"
+                      class="nav-img"
+                      alt="Tải game"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="col3" style="position: relative">
+                <a href="#" class="nav-button">
+                  <img
+                    src="./XEP-HANG-BUTTON.png"
+                    class="nav-img"
+                    alt="Xếp hạng"
+                  />
+                </a>
+
+                <!-- Bọc nav-button và side-menu trong 1 div chung -->
+                <div
+                  class="nav-with-menu"
+                  style="position: relative; display: inline-block"
+                >
+                  <a href="#" class="nav-button">
+                    <img
+                      src="./CONG-DONG-BUTTON.png"
+                      class="nav-img"
+                      alt="Cộng đồng"
+                    />
+                  </a>
+                  <!-- Side menu -->
+                  <div class="side-menu">
+                    <div class="side-menu-title">FANPAGE</div>
+                    <div class="side-menu-title">ZALO BOX 1</div>
+                    <div class="side-menu-title">ZALO BOX 2</div>
+                    <div class="side-menu-title">ZALO BOX 3</div>
+                    <div class="side-menu-title">ZALO BOX 4</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Side menu-->
-      <div class="side-menu">
-        <div class="side-menu-title">FANPAGE</div>
+        <!-- Hero section with characters -->
+        <div class="hero">
+          <div class="hero-content">
+            <img src="./BG-WEB-fix.png" alt="Game Banner" class="banner" />
 
-        <div class="side-menu-title">ZALO BOX 1</div>
-        <div class="side-menu-title">ZALO BOX 2</div>
-        <div class="side-menu-title">ZALO BOX 3</div>
-        <div class="side-menu-title">ZALO BOX 4</div>
-      </div>
-
-      <!-- Hero section with characters -->
-      <div class="hero">
-        <div class="hero-content">
-          <img src="./BG-WEB-fix.png" alt="Game Banner" class="banner" />
-
-          <div class="logo-container">
-            <img src="./LOGO-BIRONG.png" alt="Game Logo" class="logo-banner" />
-          </div>
-        </div>
-      </div>
-
-      <div class="relative-wrapper">
-        <img
-          src="./BG-TIN-TUC-+-CHARACTOR.png"
-          alt="Gameplay Background"
-          class="background-image"
-        />
-
-        <div class="content-wrapper">
-          <div class="title-center">
-            <img
-              src="./TIN-TUC---SU-KIEN-BUTTON.png"
-              alt=""
-              class="tilte-img"
-            />
-          </div>
-          <!-- News section -->
-          <div class="news-section">
-            <img
-              src="./BANG-TIN-TUC.png"
-              alt="Bảng tin tức"
-              class="news-background"
-            />
-
-            <div class="news-overlay">
-              <div class="news-item">
-                <div class="news-image">
-                  <img src="./AVATAR-APP-GAME.png" alt="Tin tức 1" />
-                </div>
-                <div class="news-content">
-                  <h3 class="news-title">
-                    Tựa game hot nhất 2025 chính thức ra mắt!
-                  </h3>
-                  <p class="news-date">05/04/2025</p>
-                </div>
-              </div>
-
-              <div class="news-item">
-                <div class="news-image">
-                  <img src="./AVATAR-APP-GAME.png" alt="Tin tức 2" />
-                </div>
-                <div class="news-content">
-                  <h3 class="news-title">Cập nhật tính năng mới đầy hấp dẫn</h3>
-                  <p class="news-date">03/04/2025</p>
-                </div>
-              </div>
-
-              <div class="news-item">
-                <div class="news-image">
-                  <img src="./AVATAR-APP-GAME.png" alt="Tin tức 3" />
-                </div>
-                <div class="news-content">
-                  <h3 class="news-title">
-                    Chuỗi sự kiện ưu đãi cực khủng tháng 4
-                  </h3>
-                  <p class="news-date">01/04/2025</p>
-                </div>
-              </div>
+            <div class="logo-container">
+              <img
+                src="./LOGO-BIRONG.png"
+                alt="Game Logo"
+                class="logo-banner"
+              />
             </div>
           </div>
+        </div>
 
-          <!-- Character section -->
-          <div class="character-section">
+        <div class="relative-wrapper">
+          <img
+            src="./BG-TIN-TUC-+-CHARACTOR.png"
+            alt="Gameplay Background"
+            class="background-image"
+          />
+
+          <div class="content-wrapper">
             <div class="title-center">
               <img
-                src="./GIOI-THIEU-NHAN-VAT-BUTTON.png"
+                src="./TIN-TUC---SU-KIEN-BUTTON.png"
                 alt=""
                 class="tilte-img"
               />
             </div>
-            <div class="character-showcase-container">
-              <div class="left-curve-column">
+            <!-- News section -->
+            <div class="news-section">
+              <img
+                src="./BANG-TIN-TUC.png"
+                alt="Bảng tin tức"
+                class="news-background"
+              />
+
+              <div class="news-overlay">
+                <div class="news-item">
+                  <div class="news-image">
+                    <img src="./AVATAR-APP-GAME.png" alt="Tin tức 1" />
+                  </div>
+                  <div class="news-content">
+                    <h3 class="news-title">
+                      Tựa game hot nhất 2025 chính thức ra mắt!
+                    </h3>
+                    <p class="news-date">05/04/2025</p>
+                  </div>
+                </div>
+
+                <div class="news-item">
+                  <div class="news-image">
+                    <img src="./AVATAR-APP-GAME.png" alt="Tin tức 2" />
+                  </div>
+                  <div class="news-content">
+                    <h3 class="news-title">
+                      Cập nhật tính năng mới đầy hấp dẫn
+                    </h3>
+                    <p class="news-date">03/04/2025</p>
+                  </div>
+                </div>
+
+                <div class="news-item">
+                  <div class="news-image">
+                    <img src="./AVATAR-APP-GAME.png" alt="Tin tức 3" />
+                  </div>
+                  <div class="news-content">
+                    <h3 class="news-title">
+                      Chuỗi sự kiện ưu đãi cực khủng tháng 4
+                    </h3>
+                    <p class="news-date">01/04/2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Character section -->
+            <div class="character-section">
+              <div class="title-center">
                 <img
-                  src="./CIRCLE-CHARACTER.png"
-                  alt="Vòng cung"
-                  class="curve-image"
+                  src="./GIOI-THIEU-NHAN-VAT-BUTTON.png"
+                  alt=""
+                  class="tilte-img"
                 />
-                <div class="circle-icons">
-                  <div id="circleIcons"></div>
+              </div>
+              <div class="character-showcase-container">
+                <div class="left-curve-column">
+                  <img
+                    src="./CIRCLE-CHARACTER.png"
+                    alt="Vòng cung"
+                    class="curve-image"
+                  />
+                  <div class="circle-icons">
+                    <div id="circleIcons"></div>
+                  </div>
+                </div>
+
+                <div class="right-character-column">
+                  <img
+                    id="mainCharacterImage"
+                    src=""
+                    alt="Nhân vật"
+                    class="character-image"
+                  />
                 </div>
               </div>
 
-              <div class="right-character-column">
-                <img
-                  id="mainCharacterImage"
-                  src=""
-                  alt="Nhân vật"
-                  class="character-image"
-                />
-              </div>
-            </div>
-
-            <div class="character-nav">
-              <button class="character-nav-button" onclick="loadRace('xayda')">
-                <img
-                  src="./XAYDA-BUTTON 1.png"
-                  alt="Xayda"
-                  class="buttonchar"
-                />
-              </button>
-              <button
-                class="character-nav-button"
-                onclick="loadRace('traidat')"
-              >
-                <img
-                  src="./TRAI-DAT-BUTTON-1.png"
-                  alt="Trái Đất"
-                  class="buttonchar"
-                />
-              </button>
-              <button class="character-nav-button" onclick="loadRace('namek')">
-                <img
-                  src="./NAMEK-BUTTON-1.png"
-                  alt="Namek"
-                  class="buttonchar"
-                />
-              </button>
-              <button
-                class="character-nav-button"
-                onclick="loadRace('demonfrost')"
-              >
-                <img
-                  src="./DEMON-FROST-BUTTON-1.png"
-                  alt="Demon Frost"
-                  class="buttonchar"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="gameplay-section">
-        <img
-          src="./DAC-SAC-GAME-BG.png"
-          alt="Gameplay Background"
-          class="gameplay-background"
-        />
-
-        <div class="title-center-ds">
-          <img src="./DAC-SAC-GAME-BUTTON.png" alt="" class="tilte-img" />
-        </div>
-
-        <div class="carousel-container">
-          <div class="slider-container">
-            <div class="glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                  <li class="glide__slide">
-                    <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 1" />
-                  </li>
-                  <li class="glide__slide">
-                    <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 2" />
-                  </li>
-                  <li class="glide__slide">
-                    <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 3" />
-                  </li>
-                  <li class="glide__slide">
-                    <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 4" />
-                  </li>
-                  <li class="glide__slide">
-                    <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 5" />
-                  </li>
-                  <li class="glide__slide">
-                    <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 6" />
-                  </li>
-                </ul>
+              <div class="character-nav">
+                <button
+                  class="character-nav-button"
+                  onclick="loadRace('xayda')"
+                >
+                  <img
+                    src="./XAYDA-BUTTON 1.png"
+                    alt="Xayda"
+                    class="buttonchar"
+                  />
+                </button>
+                <button
+                  class="character-nav-button"
+                  onclick="loadRace('traidat')"
+                >
+                  <img
+                    src="./TRAI-DAT-BUTTON-1.png"
+                    alt="Trái Đất"
+                    class="buttonchar"
+                  />
+                </button>
+                <button
+                  class="character-nav-button"
+                  onclick="loadRace('namek')"
+                >
+                  <img
+                    src="./NAMEK-BUTTON-1.png"
+                    alt="Namek"
+                    class="buttonchar"
+                  />
+                </button>
+                <button
+                  class="character-nav-button"
+                  onclick="loadRace('demonfrost')"
+                >
+                  <img
+                    src="./DEMON-FROST-BUTTON-1.png"
+                    alt="Demon Frost"
+                    class="buttonchar"
+                  />
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Footer -->
-      <div class="footer"></div>
+        <div class="gameplay-section">
+          <img
+            src="./DAC-SAC-GAME-BG.png"
+            alt="Gameplay Background"
+            class="gameplay-background"
+          />
+
+          <div class="title-center-ds">
+            <img src="./DAC-SAC-GAME-BUTTON.png" alt="" class="tilte-img" />
+          </div>
+
+          <div class="carousel-container">
+            <div class="slider-container">
+              <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                      <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 1" />
+                    </li>
+                    <li class="glide__slide">
+                      <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 2" />
+                    </li>
+                    <li class="glide__slide">
+                      <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 3" />
+                    </li>
+                    <li class="glide__slide">
+                      <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 4" />
+                    </li>
+                    <li class="glide__slide">
+                      <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 5" />
+                    </li>
+                    <li class="glide__slide">
+                      <img src="./BANNER-DAC-SAC-GAME.png" alt="Image 6" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer"></div>
+      </div>
     </div>
-
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.min.js"></script>
 
@@ -423,6 +449,26 @@
       }
 
       window.onload = () => loadRace("xayda");
+    </script>
+    <script>
+      function applyScale() {
+        const designWidth = 1200;
+        const windowWidth = window.innerWidth;
+
+        const scaleRatio =
+          windowWidth < designWidth ? windowWidth / designWidth : 1;
+
+        const wrapper = document.getElementById("scale-wrapper");
+        wrapper.style.transform = `scale(${scaleRatio})`;
+
+        wrapper.style.width = `${designWidth}px`;
+        wrapper.style.margin = "0 auto";
+
+        document.body.setAttribute("data-scale-ratio", scaleRatio.toFixed(3));
+      }
+
+      window.addEventListener("resize", applyScale);
+      window.addEventListener("load", applyScale);
     </script>
   </body>
 </html>
