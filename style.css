@@ -111,6 +111,7 @@ body {
   margin-bottom: 10px;
   color: #ffe9c2;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 .side-menu-title:hover {
   color: #ff5722;
@@ -147,25 +148,15 @@ body {
   margin-top: -84px;
 }
 
-/* Main container
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-
-  background-size: 100% 100%;
-  position: relative;
-  overflow-x: hidden;
-} */
-
 .banner {
   width: 100%;
-  height: 659px;
+  height: 709px;
   display: block;
 }
 
 .logo-container {
   position: absolute;
-  top: 23%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -178,7 +169,6 @@ body {
 
 .nav-buttons {
   display: flex;
-  /* justify-content: space-around; */
   width: 100%;
   justify-content: center;
   padding: 10px 20px;
@@ -219,9 +209,6 @@ body {
   height: 100px;
 }
 
-/* .gameplay-background {
-  position: absolute;
-} */
 .title-center-ds,
 .carousel-container {
   position: relative;
@@ -251,7 +238,6 @@ body {
 .banner {
   width: 100%;
   max-width: 1200px;
-  height: 636px;
 }
 
 .play-button {
@@ -544,24 +530,9 @@ body {
 }
 .news-date {
   font-size: 14px;
-  color: #020202;
+  color: #d61010;
   margin: 0;
 }
-
-/* .circle-icon {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  transition: transform 0.3s;
-  border: 3px solid transparent;
-  border-radius: 50%;
-}
-
-.circle-icon.active {
-  transform: scale(1.1);
-  border-color: yellow;
-} */
 
 /* /////////////////////////// */
 .relative-wrapper {
@@ -586,7 +557,7 @@ body {
   top: 44px;
 }
 
-/* /////////////////////////////////////////////////slider */
+/* //////slider */
 .slider-container {
   width: 100%;
   max-width: 1200px;

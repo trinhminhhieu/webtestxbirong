@@ -32,7 +32,7 @@
             class="header-bg"
           />
 
-          <!-- Header content on top -->
+          <!-- Header -->
           <div class="header">
             <div class="nav-buttons">
               <div class="col1">
@@ -74,7 +74,6 @@
                   />
                 </a>
 
-                <!-- Bọc nav-button và side-menu trong 1 div chung -->
                 <div
                   class="nav-with-menu"
                   style="position: relative; display: inline-block"
@@ -100,7 +99,7 @@
           </div>
         </div>
 
-        <!-- Hero section with characters -->
+        <!-- Hero section-->
         <div class="hero">
           <div class="hero-content">
             <img src="./BG-WEB-fix.png" alt="Game Banner" class="banner" />
@@ -212,9 +211,10 @@
                 <button
                   class="character-nav-button"
                   onclick="loadRace('xayda')"
+                  data-race="xayda"
                 >
                   <img
-                    src="./XAYDA-BUTTON 1.png"
+                    src="./XAYDA-BUTTON-ACTIVE.png"
                     alt="Xayda"
                     class="buttonchar"
                   />
@@ -222,6 +222,7 @@
                 <button
                   class="character-nav-button"
                   onclick="loadRace('traidat')"
+                  data-race="traidat"
                 >
                   <img
                     src="./TRAI-DAT-BUTTON-1.png"
@@ -232,6 +233,7 @@
                 <button
                   class="character-nav-button"
                   onclick="loadRace('namek')"
+                  data-race="namek"
                 >
                   <img
                     src="./NAMEK-BUTTON-1.png"
@@ -242,6 +244,7 @@
                 <button
                   class="character-nav-button"
                   onclick="loadRace('demonfrost')"
+                  data-race="demonfrost"
                 >
                   <img
                     src="./DEMON-FROST-BUTTON-1.png"
@@ -394,10 +397,48 @@
       let currentRace = "xayda";
       let currentIndex = 0;
 
+      function getActiveButtonImage(race) {
+        switch (race) {
+          case "xayda":
+            return "./XAYDA-BUTTON-ACTIVE.png";
+          case "traidat":
+            return "./TRAI-DAT-BUTTON-ACTIVE.png";
+          case "namek":
+            return "./NAMEK-BUTTON-ACTIVE.png";
+          case "demonfrost":
+            return "./DEMON-FROST-BUTTON-ACTIVE.png";
+        }
+      }
+
+      function getInactiveButtonImage(race) {
+        switch (race) {
+          case "xayda":
+            return "./XAYDA-BUTTON-1.png";
+          case "traidat":
+            return "./TRAI-DAT-BUTTON-1.png";
+          case "namek":
+            return "./NAMEK-BUTTON-1.png";
+          case "demonfrost":
+            return "./DEMON-FROST-BUTTON-1.png";
+        }
+      }
+
       function loadRace(race) {
         currentRace = race;
         currentIndex = 0;
         const icons = characterData[race];
+
+        const buttons = document.querySelectorAll(".character-nav-button");
+        buttons.forEach((button) => {
+          const btnRace = button.getAttribute("data-race");
+          const img = button.querySelector("img");
+
+          if (btnRace === race) {
+            img.src = getActiveButtonImage(btnRace);
+          } else {
+            img.src = getInactiveButtonImage(btnRace);
+          }
+        });
 
         const circleContainer = document.getElementById("circleIcons");
         circleContainer.innerHTML = "";
