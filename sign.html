@@ -28,7 +28,7 @@
           <div class="header">
             <div class="nav-buttons">
               <div class="col1">
-                <a href="./sign.html" class="nav-button">
+                <a href="#" class="nav-button">
                   <img
                     src="./DANG-NHAP-BUTTON.png"
                     class="nav-img"
@@ -111,108 +111,68 @@
 
           <div class="content-wrapper-news">
             <div class="title-center">
-              <img src="./BXH/TITLE-BXH.png" alt="" class="tilte-img-news" />
+              <img src="./TITLE-DANG-NHAP.png" alt="" class="tilte-img-login" />
             </div>
-            <!-- rank section -->
-            <section class="ranking-section">
-              <div class="ranking-column">
-                <h2>TOP sức mạnh</h2>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Người chơi</th>
-                      <th>Sức mạnh</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
 
-              <div class="ranking-column">
-                <h2>TOP nhiệm vụ</h2>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Người chơi</th>
-                      <th>Số nv</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Dragon</td>
-                      <td>100.000.000.000</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <section class="sign-section">
+              <div class="form-container">
+                <div class="tab-buttons">
+                  <button class="tab-btn active" onclick="showTab('login')">
+                    Đăng nhập
+                  </button>
+                  <button class="tab-btn" onclick="showTab('register')">
+                    Đăng ký
+                  </button>
+                  <button class="tab-btn" onclick="showTab('forgot')">
+                    Mật khẩu
+                  </button>
+                </div>
+
+                <div class="tab-content" id="login">
+                  <label class="top-label">E-mail hoặc số điện thoại</label>
+                  <input
+                    type="text"
+                    placeholder="Nhập email hoặc số điện thoại"
+                  />
+                  <label class="top-label">Mật khẩu</label>
+                  <input type="password" placeholder="Nhập mật khẩu" />
+                  <label class="top-label">Máy chủ</label>
+                  <input type="text" placeholder="Nhập máy chủ" />
+
+                  <a href="#" class="link">Quên mật khẩu?</a>
+
+                  <div class="btnsign">
+                    <button class="submit-btn">Xác nhận</button>
+                  </div>
+                  <div class="divider">
+                    <span>Hoặc</span>
+                  </div>
+                  <p class="bottom-link">
+                    Chưa có tài khoản? <a href="#">Đăng ký</a>
+                  </p>
+                </div>
+
+                <div class="tab-content" id="register" style="display: none">
+                  <label class="top-label">Tên người dùng</label>
+                  <input type="text" placeholder="Nhập tên người dùng" />
+                  <label class="top-label">Email</label>
+                  <input type="email" placeholder="Nhập email" />
+                  <label class="top-label">Mật khẩu</label>
+                  <input type="password" placeholder="Nhập mật khẩu" />
+                  <div class="btnsign">
+                    <button class="submit-btn">Đăng ký</button>
+                  </div>
+                </div>
+
+                <div class="tab-content" id="forgot" style="display: none">
+                  <label class="top-label"
+                    >Nhập email để đặt lại mật khẩu</label
+                  >
+                  <input type="email" placeholder="Email của bạn" />
+                  <div class="btnsign">
+                    <button class="submit-btn">Gửi yêu cầu</button>
+                  </div>
+                </div>
               </div>
             </section>
           </div>
@@ -223,6 +183,19 @@
       </div>
     </div>
     <!-- Scripts -->
+    <script>
+      function showTab(tabId) {
+        const tabs = document.querySelectorAll(".tab-content");
+        const buttons = document.querySelectorAll(".tab-btn");
+
+        tabs.forEach((tab) => (tab.style.display = "none"));
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        document.getElementById(tabId).style.display = "block";
+        event.target.classList.add("active");
+      }
+    </script>
+
     <script>
       function applyScale() {
         const designWidth = 1200;

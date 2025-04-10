@@ -4,7 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Tilt Warp", sans-serif;
+  font-family: "Gabarito", sans-serif;
+
   font-weight: 400;
   font-style: normal;
 }
@@ -13,7 +14,8 @@ body {
   background-color: #ffffff;
   color: #fff;
   width: 100%;
-  font-family: "Tilt Warp", sans-serif;
+  font-family: "Gabarito", sans-serif;
+
   font-weight: 400;
   font-style: normal;
   height: 100vh;
@@ -195,6 +197,12 @@ body {
 }
 .tilte-img-news {
   width: 588px;
+  height: 103px;
+  margin-top: -30px;
+}
+
+.tilte-img-login {
+  width: 377px;
   height: 103px;
   margin-top: -30px;
 }
@@ -783,4 +791,185 @@ thead {
 
 tbody tr:nth-child(even) {
   background-color: #e7f5fe;
+}
+
+.sign-section {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  background: white;
+  margin-top: -63px;
+  padding: 124px 10px;
+  z-index: -1;
+}
+.form-container {
+  width: 660px;
+  margin: 50px auto;
+  background: #f36621;
+  border: 4px solid #f4511e;
+  border-radius: 10px;
+  padding: 11px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  background: #f36621;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab-btn:last-child {
+  border-right: none;
+}
+
+.tab-btn.active {
+  background: white;
+  color: black;
+  border-bottom: none;
+}
+
+.tab-content {
+  display: block;
+  background-color: #ffff;
+  padding: 14px;
+  height: 473px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #f4511e, #ff5722);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  width: 41%;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.bottom-link {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+  color: #000;
+}
+
+.top-label {
+  color: #000;
+  text-align: left;
+  font-family: "Gabarito", sans-serif;
+}
+.btnsign {
+  text-align: center;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider span {
+  padding: 0 10px;
+  color: #555;
+  font-size: 14px;
+}
+.recharge-section {
+  background-color: #fff3e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.recharge-section-bg {
+  width: 70%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: -65px;
+  padding: 124px 10px;
+  z-index: -1;
+}
+.recharge-section h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.recharge-section .subtitle {
+  color: #f57c00;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border: 3px solid #1976d2;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.card .price {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.disabled-btn {
+  background: linear-gradient(to right, #ff5722, #ff9800);
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: not-allowed;
+  margin-top: 8px;
 }
