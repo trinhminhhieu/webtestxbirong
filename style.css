@@ -906,6 +906,12 @@ input {
   color: #555;
   font-size: 14px;
 }
+.digichunk {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #ccc;
+  width: 9%;
+}
 .recharge-section {
   background-color: #fff3e0;
   padding: 20px;
@@ -925,12 +931,16 @@ input {
 .recharge-section h2 {
   font-size: 24px;
   margin-bottom: 5px;
+  text-align: left;
+  font-size: 32px;
 }
 
 .recharge-section .subtitle {
   color: #f57c00;
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: left;
+  margin-top: 4px;
 }
 
 .card-grid {
@@ -950,7 +960,6 @@ input {
 
 .card img {
   width: 100%;
-  border: 3px solid #1976d2;
   border-radius: 8px;
 }
 
