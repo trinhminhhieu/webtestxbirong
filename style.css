@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Anton", sans-serif;
+  font-family: "Tilt Warp", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -13,7 +13,7 @@ body {
   background-color: #ffffff;
   color: #fff;
   width: 100%;
-  font-family: "Anton", sans-serif;
+  font-family: "Tilt Warp", sans-serif;
   font-weight: 400;
   font-style: normal;
   height: 100vh;
@@ -153,7 +153,12 @@ body {
   height: 709px;
   display: block;
 }
-
+.banner-news {
+  width: 100%;
+  max-width: 1200px;
+  height: 509px;
+  display: block;
+}
 .logo-container {
   position: absolute;
   top: 25%;
@@ -188,7 +193,11 @@ body {
   width: 241px;
   height: 67px;
 }
-
+.tilte-img-news {
+  width: 588px;
+  height: 103px;
+  margin-top: -30px;
+}
 .rows {
   display: inline-flex;
 }
@@ -473,6 +482,14 @@ body {
   object-fit: contain;
 }
 
+.xemthempr {
+  text-align: right;
+  font-size: 12px;
+}
+.xemthem {
+  text-decoration: none;
+  color: #b41d22;
+}
 .news-section {
   position: relative;
   width: 100%;
@@ -515,8 +532,8 @@ body {
 }
 
 .news-image img {
-  width: 79px;
-  height: 79px;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -557,106 +574,23 @@ body {
   height: auto;
   z-index: 0;
 }
-
+.background-image-news {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
 .content-wrapper {
   position: relative;
   z-index: 1;
   padding: 20px;
   top: -1px;
 }
-
-/* //////slider */
-/* .slider-container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 20px;
-} */
-
-/* .glide__slides {
-  align-items: center;
-  height: 300px;
-}
-
-.glide__slide {
-  transition: all 0.4s ease;
-  transform: scale(0.85);
+.content-wrapper-news {
+  position: relative;
   z-index: 1;
 }
-.glide__slide--active {
-  transform: scale(1);
-  z-index: 3;
-  opacity: 1;
-}
-.glide__slide--before {
-  transform: scale(0.85) translateX(30px);
-  opacity: 1;
-}
-.glide__slide--after {
-  transform: scale(0.85) translateX(-30px);
-  opacity: 1;
-}
-
-.glide__slide img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.glide {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-}
-.glide * {
-  box-sizing: inherit;
-}
-.glide__track {
-  overflow: hidden;
-}
-.glide__slides {
-  position: relative;
-  width: 100%;
-  list-style: none;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  touch-action: pan-Y;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  display: flex;
-  flex-wrap: nowrap;
-  will-change: transform;
-}
-.glide__slides--dragging {
-  user-select: none;
-}
-.glide__slide {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  white-space: normal;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: transparent;
-}
-.glide__slide a {
-  user-select: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-.glide__arrows {
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-
-.glide--rtl {
-  direction: rtl;
-} */
 
 .carousel-container {
   width: 100%;
@@ -671,8 +605,8 @@ body {
   position: relative;
   width: 800px;
   height: 477px;
-  overflow: visible; /* Cho phép ảnh thò ra ngoài container */
-  margin: 0 auto; /* Căn giữa slider-container trong carousel-container */
+  overflow: visible;
+  margin: 0 auto;
 }
 
 .slider {
@@ -704,24 +638,149 @@ body {
 
 .slide.active {
   z-index: 10;
-  left: 50%; /* Đặt vị trí bắt đầu từ giữa container */
-  transform: translateX(-50%) scale(1); /* Căn chỉnh chính xác vào giữa */
+  left: 50%;
+  transform: translateX(-50%) scale(1);
   opacity: 1;
 }
 
 .slide.prev {
   z-index: 5;
-  left: 0; /* Vị trí bắt đầu từ trái */
-  transform: translateX(-30%) scale(0.85); /* Dịch sang trái thêm */
+  left: 0;
+  transform: translateX(-30%) scale(0.85);
   opacity: 0.7;
-  height: 67%; /* Chiều cao 67% so với ảnh chính */
+  height: 67%;
 }
 
 .slide.next {
   z-index: 5;
-  right: 0; /* Vị trí bắt đầu từ phải */
-  transform: translateX(30%) scale(0.85); /* Dịch sang phải thêm */
+  right: 0;
+  transform: translateX(30%) scale(0.85);
   opacity: 0.7;
-  height: 67%; /* Chiều cao 67% so với ảnh chính */
-  left: auto; /* Reset left property */
+  height: 67%;
+  left: auto;
+}
+
+/* /////////////////////////////// */
+
+.relative-wrapper-tt {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: -37px;
+}
+.news-section-tt {
+  width: 70%;
+  margin: 0 auto;
+  padding: 140px 0;
+  background-color: #ffffff;
+  margin-top: -58px;
+  padding: 116px 35px;
+}
+
+.news-item-tt {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 42px;
+}
+
+.news-image-tt {
+  width: 30%;
+  padding-right: 20px;
+}
+
+.news-image-tt img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.news-content-tt {
+  width: 70%;
+  position: relative;
+}
+
+.news-header-tt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-badge {
+  background-color: #a80000;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.news-title-tt {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+  color: #000;
+  cursor: pointer;
+}
+.news-title-tt:hover {
+  color: #ff5722;
+}
+
+.news-date {
+  font-size: 12px;
+  color: #555;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.news-description {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #444;
+}
+.ranking-section {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  background: white;
+  text-align: center;
+  margin-top: -71px;
+  padding: 124px 10px;
+  z-index: -1;
+}
+
+.ranking-column {
+  flex: 1;
+  background: white;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.ranking-column h2 {
+  background-color: #f4511e; /* cam giống hình */
+  color: white;
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 8px;
+  font-size: 14px;
+  color: #000;
+}
+
+thead {
+  background-color: #e7f5fe;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e7f5fe;
 }
